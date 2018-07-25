@@ -1,0 +1,153 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <title>Precios Tus mejores Guitarras !!!</title>
+        <meta charset="utf-8"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta" rel="stylesheet">
+        <link rel="stylesheet" href="css/invie.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    </head>
+    <body class="precios">
+            <header id="header" class="header background"> <!-- Header -->            
+                <div class="contenedor">
+                    <figure class="logotipo"> <!-- Logotipo -->
+                        <img src="images/invie.png" width="186" height="60" alt="Invie logotipo"/>
+                    </figure>
+                    <span class="burguer-button icon-menu" id="burguer-button"></span>
+                    <nav class="menu" id="menu"><!-- Menu -->
+                        <ul>
+                            <li>
+                                <a href="index.html">home</a>
+                            </li>
+                            <li>
+                                <a href="index.html#guitarras">Guitarras</a>
+                            </li>
+                            <li>
+                                <a href="precios.html">Precios</a>
+                            </li>                        
+                        </ul>
+                    </nav>        
+                </div>
+            </header>
+            <section class="tabla">
+            <div class="contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Precio</th>
+                            <th>Descripcion</th>
+                            <th>Modelo</th>
+                            <th>Precio</th>
+                            <th>Descripcion</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Invie clasic</td>
+                            <td>$100000</td>
+                            <td>Una guitarra muy vacana</td>
+                            <td>Invie clasic</td>
+                            <td>$100000</td>
+                            <td>Una guitarra muy vacana</td>
+
+                        </tr>
+                        <tr>
+                            <td>Invie clasic</td>
+                            <td>$100000</td>
+                            <td>Una guitarra muy vacana</td>
+                            <td>Invie clasic</td>
+                            <td>$100000</td>
+                            <td>Una guitarra muy vacana</td>
+
+                        </tr>
+                        <tr>
+                            <td>Invie clasic</td>
+                            <td>$100000</td>
+                            <td>Una guitarra muy vacana</td>
+                            <td>Invie clasic</td>
+                            <td>$100000</td>
+                            <td>Una guitarra muy vacana</td>
+
+                        </tr>
+                                    
+                    </tbody>
+                </table>
+            </div>
+            </section>
+            <footer class="footer">
+                    <div class="contenedor">
+                        <div class="contacto">
+                            <img src="images/invie-white.png" alt="logotipo blanco"/>
+                            <a href="tel:+573113400544"><strong>Telefono</strong><span>3113400544</span></a>
+                            <a href="mailto:contacto@invie.com"><strong>E-mail</strong><span>contacto@invie.com</span></a>
+                        </div>
+                        <form class="formulario">
+                            <div class="col1">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" required id="nombre" name="nombre"/>
+                                <label for="email">E-mail</label>
+                                <input type="email" required id="email" name="email"/>
+                                <div class="sexo">
+                                    <label for="mujer">
+                                        <input type="radio" id="mujer" name="sexo" value="mujer" checked> Mujer
+                                    </label>
+                                    <label for="hombre">
+                                        <input type="radio" id="hombre" name="sexo" value="mombre"> Hombre
+                                    </label>
+                                </div>
+                                <div class="intereses">
+                                <label for="cotizacion">
+                                    <input type="checkbox" name="intereses" id="cotizacion" value="cotizacion" checked> Cotización
+                                </label>
+                                <label for="reclamos">
+                                        <input type="checkbox" name="intereses" id="reclamos" value="reclamos"> Reclamos
+                                </label>
+                                <label for="comentarios">
+                                        <input type="checkbox" name="intereses" id="comentarios" value="comentarios"> Comentarios
+                                </label>
+                                <label for="otros">
+                                        <input type="checkbox" name="intereses" id="otros" value="otros"> Otros
+                                </label>
+                                </div>
+                            </div>
+                            <div class="col2">  
+                                <div>
+                                    <label for="comentarios">Comentarios</label>
+                                    <textarea name="comentarios" id="comentarios" cols="30" rows="7"></textarea>
+                                    <input type="submit" value="Enviar" class="button">
+                                </div>
+                            </div>    
+                        </form>
+                    </div>  
+                </footer>         
+                <script>
+                    var consulta = window.matchMedia('(max-width: 500px)');
+                    consulta.addListener(mediaQuery);
+        
+                    var $burguerButton = document.getElementById('burguer-button');
+                    var $menu = document.getElementById('menu');
+                    
+                    function toogleMenu(){
+                        $menu.classList.toggle('active');
+                    };    
+                    function mediaQuery () {
+                    if (consulta.matches)
+                    {
+                        console.log('se cumplio !!!');
+                        $burguerButton.addEventListener('touchstart', toogleMenu);
+                    }
+                    else{
+                        console.log('no se cumplio');
+                        $burguerButton.removeEventListener('touchstart', toogleMenu);
+                    }}
+                    mediaQuery ();
+                    //lazy loading
+                    var bLazy = new Blazy({
+                        selector: 'img'
+                    });
+        
+                </script>                   
+    </body>
+</html>
